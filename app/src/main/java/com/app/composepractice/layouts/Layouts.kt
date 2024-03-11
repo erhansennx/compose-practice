@@ -27,21 +27,21 @@ fun Layouts() {
         verticalArrangement = Arrangement.Center
     ) {
         CustomTextUnderline("Usage Column")
-        UsageColumn()
+        ColumnUsage()
         Spacer(modifier = Modifier.padding(15.dp))
         // Spacer is a composable that can be used when you want to add an additional space between composables.
 
         CustomTextUnderline("Usage Row")
-        UsageRow()
+        RowUsage()
         Spacer(modifier = Modifier.padding(15.dp))
 
         CustomTextUnderline("Usage Box")
-        UsageBox()
+        BoxUsage()
     }
 }
 
 @Composable
-fun UsageColumn() {
+fun ColumnUsage() {
     // A Column will show each child below the previous children.
     // It’s similar to a LinearLayout with vertical orientation.
     Column(
@@ -66,7 +66,7 @@ fun UsageColumn() {
 }
 
 @Composable
-fun UsageRow() {
+fun RowUsage() {
     // A Row will show each child next to the previous children.
     // It’s similar to a LinearLayout with a horizontal orientation.
     Row(
@@ -91,7 +91,7 @@ fun UsageRow() {
 }
 
 @Composable
-fun UsageBox() {
+fun BoxUsage() {
     // The children of the Box layout will be stacked over each other.
     Box {
         Text(
@@ -119,7 +119,7 @@ fun CustomTextUnderline(textString: String) {
 }
 
 @Composable
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 fun LayoutsPreview() {
     Layouts()
 }

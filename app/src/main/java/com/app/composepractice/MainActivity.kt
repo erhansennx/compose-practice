@@ -10,6 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.app.composepractice.layouts.Elements
 import com.app.composepractice.layouts.Layouts
 import com.app.composepractice.ui.theme.ComposePracticeTheme
 
@@ -17,14 +18,14 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Layouts()
+            Elements()
         }
     }
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 fun GreetingPreview() {
-    Layouts()
+    Elements()
 }
